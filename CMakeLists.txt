@@ -4,4 +4,4 @@ project(CppWinRTComponent)
 
 set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/dist)
 
-add_subdirectory(CppWinRTComponent)
+add_subdirectory(SampleControl)

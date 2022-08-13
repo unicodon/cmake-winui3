@@ -1,9 +1,0 @@
-namespace Sample
-{
-	[default_interface]
-	runtimeclass SampleClass
-	{
-		SampleClass();
-		Double sqrt(Double x);
-	}
-}
