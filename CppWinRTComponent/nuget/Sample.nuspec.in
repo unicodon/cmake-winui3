@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Sample</id>
-		<version>0.4.10-prerelease</version>
-		<authors>Me</authors>
+		<version>@PACKAGE_VERSION@</version>
+		<authors>Author</authors>
 		<description>A simple component</description>
 		<dependencies>
 			<group targetFramework="net6.0-windows10.0.18362.0" />
@@ -11,12 +11,10 @@
 		</dependencies>
 	</metadata>
 	<files>
-		<!--Support .NET 6, .NET Core 3, UAP, .NET Framework 4.6, C++ -->
 		<!--Architecture-netural assemblies-->
-		<file src="..\..\_build\x64\Release\CsWinRTProjection\bin\CsWinRTProjection.dll" target="lib\net6.0-windows10.0.18362.0\CsWinRTProjection.dll" />
-		<file src="..\..\..\dist\bin\Sample.winmd" target="lib\uap10.0\Sample.winmd" />
-
+		<file src="@CMAKE_CURRENT_BINARY_DIR@\Sample.Projection.dll" target="lib\net6.0-windows10.0.18362.0\" />
+		<file src="@CMAKE_CURRENT_BINARY_DIR@\Sample.winmd" target="lib\uap10.0\Sample.winmd" />
 		<!--Architecture-specific implementation DLLs should be copied into RID-relative folders-->
-		<file src="..\..\..\dist\bin\Sample.dll" target="runtimes\win10-x64\native\Sample.dll" />
+		<file src="@CMAKE_CURRENT_BINARY_DIR@\Sample.dll" target="runtimes\win10-x64\native\Sample.dll" />
 	</files>
 </package>

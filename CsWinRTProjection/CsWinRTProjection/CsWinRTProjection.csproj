@@ -1,8 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
-  <Platform>AnyCPU</Platform>
+		<TargetFramework>net6.0-windows10.0.18362.0</TargetFramework>
+  <Platforms>x64</Platforms>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -19,6 +19,7 @@
 		
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Windows.CsWinRT" Version="1.6.5" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.1.4" />
 	</ItemGroup>
 
 	<ItemGroup>
