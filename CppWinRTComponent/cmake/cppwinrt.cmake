@@ -13,8 +13,7 @@ ExternalProject_Add(
 )
 
 ExternalProject_Get_Property(CppWinRTBuild SOURCE_DIR)
-find_program(CPPWinRT cppwinrt PATHS ${SOURCE_DIR}/bin REQUIRED)
 
 add_executable(CppWinRT IMPORTED GLOBAL)
 add_dependencies(CppWinRT CppWinRTBuild)
-set_target_properties(CppWinRT PROPERTIES IMPORTED_LOCATION "${CPPWinRT}")
+set_target_properties(CppWinRT PROPERTIES IMPORTED_LOCATION "${SOURCE_DIR}/bin/cppwinrt.exe")

@@ -13,8 +13,10 @@ ExternalProject_Add(
 )
 
 ExternalProject_Get_Property(CsWinRTBuild SOURCE_DIR)
-find_program(CsWinRT cswinrt PATHS ${SOURCE_DIR} REQUIRED)
 
 add_executable(CsWinRT IMPORTED GLOBAL)
-add_dependencies(CsWinRT CppWinRTBuild)
-set_target_properties(CsWinRT PROPERTIES IMPORTED_LOCATION "${CsWinRT}")
+add_dependencies(CsWinRT CsWinRTBuild)
+set_target_properties(CsWinRT PROPERTIES IMPORTED_LOCATION "${SOURCE_DIR}/cswinrt.exe")
+
+set(CSWINRT_DIR "${SOURCE_DIR}")
+set(CSWINRT_DIR "${CSWINRT_DIR}" PARENT_SCOPE)
